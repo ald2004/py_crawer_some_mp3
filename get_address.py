@@ -41,3 +41,13 @@ with open('temp_all_address_liuluoguo_guodegang', 'w') as fid:
             downloadlink.append(f'{url}| ')
             continue
     fid.writelines('\n'.join(downloadlink))
+
+
+'''
+with open('temp_all_address_liuluoguo_guodegang','r') as f:
+    with open('download.txt','w') as fid:
+        for line in f.readlines():
+          u=line.strip()
+          fn=u.split("?")[0][-7:]
+          fid.write(f'wget \"{u}\" -O {fn}\n')
+'''
